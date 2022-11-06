@@ -1,0 +1,80 @@
+.body-precios {
+    display: grid;
+    grid-template-rows: 0.75fr 8fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+    .main-precios {
+        color: $colortextos;
+        display: grid;
+        grid-area: main;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.1fr 2fr;
+        grid-template-areas:
+        "titulo titulo"
+        "estudio exteriores";
+        width: 100%;
+        padding: 5%;
+        @include mobile {
+            grid-template-rows: 0.1fr 2fr 2fr;
+            grid-template-areas:
+            "titulo titulo"
+            "estudio estudio"
+            "exteriores exteriores";
+            
+        }
+        .main__titulo-pagina-precios {
+            grid-area: titulo;
+            margin-bottom: 20px;
+        }
+        .main__div-precio-estudio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-self: center;
+            align-self: center;
+            grid-area: estudio;
+            padding: 3%;
+            padding-inline: 5%;
+            margin: 3%;
+            width: 85%;
+            height: 100%;
+            border-style: inset;
+            border-color: $colorprincipal;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.391);
+            .div-precio-estudio__text-equipo {
+                margin-bottom: 7%;
+                font-size: 1.3rem;
+            }
+        }
+        .main__div-precio-exterior {
+            grid-area: exteriores;
+            display: flex;
+            flex-wrap: wrap;
+            justify-self: center;
+            align-self: center;
+            margin: 3%;
+            padding: 3%;
+            padding-inline: 5%;
+            width: 85%;
+            height: 100%;
+            border-style: inset;
+            border-color: $colorprincipal;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.391);
+            @include mobile {
+                align-self: flex-start;
+            }
+        }
+        .div__titulo-precios {
+            margin-bottom: 10%;
+            margin-top: 10%;
+        }
+        .div__text-precios {
+            margin-bottom: 10%;
+            font-size: 1.3rem;
+        }
+    }
+}

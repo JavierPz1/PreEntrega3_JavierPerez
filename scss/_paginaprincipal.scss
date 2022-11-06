@@ -1,0 +1,27 @@
+.body-index {
+    display: grid;
+    grid-template-rows: 0.75fr 8fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+    .main-index {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 5%;
+        padding-top: 10%;
+        grid-area: main;
+        @include tablet {
+            padding-top: 25%
+        }
+        .main__img-principal {
+            border-color: $colorprincipal;
+            border-style: inset;
+            width: 100%;
+            height: auto;
+            box-shadow: $boxshadow;
+        }
+    }
+}

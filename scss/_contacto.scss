@@ -1,0 +1,133 @@
+.body-contacto {
+    display: grid;
+    grid-template-rows: 0.75fr 9fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+    .main-contacto{
+        color: $colortextos;
+        width: 100%;
+        height: 90%;
+        padding: 5%;
+        display: grid;
+        grid-area: main;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "imagen formulario";
+        @include mobile{
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "formulario formulario"
+                "imagen imagen";
+        }
+        .main__imagen-contacto {
+            display: inline-flex;
+            justify-self: center;
+            grid-area: imagen;
+            width: 80%;
+            height: auto;
+            margin: 5%;
+            border-style: inset;
+            border-color: $colorprincipal;
+            box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.391);
+            @include mobile {
+                margin-top: 15%;
+                width: 85%;
+            }
+        }
+        .main__div-contacto {
+            grid-area: formulario;
+            margin-top: 7%;
+            width: 100%;
+            height: 50%;
+            .div-contacto__form {
+                border-top-style: solid;
+                border-top-color: $colorprincipal;
+                padding-top: 4%;
+                .form__nombre {
+                    display: inline;
+                    margin-right: 2%;
+                    font-size: 1.2rem;
+                }
+                .form__nombre-text {
+                    display: inline;
+                    width: 24%;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+                .form__apellido {
+                    display: inline;
+                    margin-left: 3%;
+                    margin-right: 2%;
+                    font-size: 1.2rem;
+                }
+                .form__apellido-text {
+                    display: inline;
+                    width: 24%;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+                .form__correo {
+                    display: block;
+                    margin-bottom: 2%;
+                    margin-top: 4%;
+                    font-size: 1.2rem;
+                }
+                .form__correo-text {
+                    width: 100%;
+                    margin-bottom: 2%;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+                .form__tema {
+                    display: block;
+                    margin-bottom: 2%;
+                    font-size: 1.2rem;
+                }
+                .form__tema-text {
+                    width: 100%;
+                    margin-bottom: 3%;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+                .form__mensaje {
+                    display: block;
+                    margin-bottom: 2%;
+                    font-size: 1.2rem;
+                }
+                .form__mensaje-text {
+                    display: inline-block;
+                    width: 100%;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+                .form__text-area {
+                    resize: none;
+                    font-size: 1rem;
+                }
+                .form__boton-enviar {
+                    display: block;
+                    color: $colortextos;
+                    background-color: rgba(43, 56, 78, 0.554);
+                    padding: 1.3%;
+                    border-radius: 13%;
+                    border-color: $colorprincipal;
+                    font-size: 1.2rem;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                }
+                input:focus {
+                    transform: scale(1.04);
+                    transition: all 0.7s;
+                }
+                textarea:focus {
+                    transform: scale(1.02);
+                        transition: all 0.7s;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,215 @@
+@import "mediaqueries";
+$colorprincipal: orange;
+$colortextos: white;
+$backgroundheader: rgba(66, 86, 118, 0.433);
+$backgroundmenu: rgb(43, 56, 78);
+$backgroundfooter: linear-gradient(to top, rgba(11, 10, 20, 0.832), rgba(31, 28, 57, 0.365));
+$boxshadow: 0 0 7px 4px rgba(0, 0, 0, 0.391);
+
+
+@keyframes AnimacionLogo {
+    0% {
+        rotate: 0deg;
+        scale: 1.03;}
+    25% {
+        rotate: 10deg;
+        scale: 1.05;}
+    50% {
+        rotate: -10deg;
+        scale: 1.08;}
+    75% {
+        rotate: 10deg;
+        scale: 1.05;}
+    100% {
+        rotate: 0deg;
+        scale: 1.03;}
+}
+@keyframes AnimacionRedesSociales {
+    0% {
+        rotate: 0deg;
+        scale: 1.03;}
+    25% {
+        rotate: 60deg;
+        scale: 1.05;}
+    50% {
+        rotate: -60deg;
+        scale: 1.08;}
+    75% {
+        rotate: 60deg;
+        scale: 1.05;}
+    100% {
+        rotate: 0deg;
+        scale: 1.03;}
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+html {
+    font-size: 62, 5%;
+    @include tablet{
+        font-size: 0.8rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    padding: 2px;
+    margin: 0px;
+}
+li {
+    display: inline-block;
+    margin-inline: 10px;
+}
+
+body {
+    background-image: url("../multimedia/degradado.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position-x: left;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    .header {
+            color: $colortextos;
+            background-color: $backgroundheader;
+            border-radius: 5px;
+            border-bottom-style: inset;
+            border-bottom-color: $colorprincipal;
+            display: flex;
+            height: 100%;
+            max-height: 100px;
+            width: 100%;
+            position: relative;
+            grid-area: header;
+            z-index: 100;
+            .header__logo {
+                position: relative;
+                width: 100px;
+                height: auto;
+                    &:hover{
+                        animation-name: AnimacionLogo;
+                        animation-duration: 0.3s;
+                    }
+                    @include mobile{
+                        width: 70px;
+                        height: auto;
+                    }
+                }
+            .navbar-toggler {
+                color: $colorprincipal;                            
+                border-color: white;
+                }
+            .header__menu {
+                    font-size: 1.5rem;
+                    text-align: right;
+                    flex-direction: row-reverse;
+                    z-index: 100;
+                    .navbar-nav{
+                        @include tablet {
+                            background-color: $backgroundmenu;
+                            border-radius: 10px;
+                            border-top-right-radius: 0px;
+                            border-style: inset;
+                            border-color: $colorprincipal;
+                        }
+                    }
+            }
+            .menuitem {
+                color: $colortextos;
+                    &:hover{
+                        color: $colorprincipal;
+                        transform: scale(1.03);
+                    }
+                }
+            .dropdown-toggle {
+                display: flex;
+                justify-content: end;
+                }
+            .dropdown-menu {
+                background-color: $backgroundmenu;
+                border-radius: 2px;                            border-top-right-radius: 0px;
+                border-style: inset;
+                border-color: $colorprincipal;
+                position: relative;                        
+                }
+            .dropdown-item {
+                font-size: 1.5rem;
+                    &:hover {
+                        background-color: transparent;
+                    }
+                    @include tablet{
+                        display: flex;
+                        justify-content: end;
+                    }
+                }
+            .dropdown-menu > li{
+                display: flex;
+                flex-direction: column;                                justify-content: end;
+                }
+        }        
+    }
+    .footer {
+        background: $backgroundfooter;
+        margin-top: 60px;
+        border-top-style: solid;
+        border-top-color: $colorprincipal;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 2%;
+        width: 100%;
+        height: auto;
+        grid-area: footer;
+        .footer__div-redes{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            @include mobile {
+                justify-content: space-evenly;
+            }
+            .div__img-instagram {
+                margin-inline: 10px;
+                position: relative;
+                margin-top: 1.5%;
+                width: 60px;
+                height: auto;
+                transition: all 0.7s;
+                    &:hover{
+                        animation-name: AnimacionRedesSociales;
+                        animation-duration: 1.5s;
+                        animation-timing-function: initial;
+                    }
+                @include tablet {
+                    width: 40px;
+                }
+            }
+            .div__img-whatsapp{
+                margin-inline: 10px;
+                position: relative;
+                margin-top: 1.5%;
+                width: 60px;
+                height: auto;
+                transition: all 0.7s;
+                    &:hover {
+                        animation-name: AnimacionRedesSociales;
+                        animation-duration: 1.5s;
+                        animation-timing-function: initial;
+                    }
+                @include tablet {
+                    width: 40px;
+                }
+            }
+        }
+}
+
+@import "paginaprincipal";
+@import "fotoestudio";
+@import "fotoexteriores";
+@import "precios";
+@import "biografia";
+@import "contacto";

@@ -1,0 +1,51 @@
+.body-exteriores {
+    display: grid;
+    grid-template-rows: 0.30fr 8fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+    .main-foto-exteriores {
+        grid-area: main;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 3%;
+        .main__imagen1-ext {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 3%;
+            box-shadow: $boxshadow
+        }
+        .main__imagen2-ext {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 3%;
+            box-shadow: $boxshadow
+        }
+        .main__imagen3-ext {
+            width: 46%;
+            height: auto;
+            margin-right: 1.5%;
+            margin-bottom: 3%;
+            box-shadow: $boxshadow
+        }
+        .main__imagen4-ext {
+            width: 46%;
+            height: auto;
+            margin-left: 1.5%;
+            margin-bottom: 3%;
+            box-shadow: $boxshadow
+        }
+        .main__imagen5-ext {
+            display: inline-block;
+            width: 55%;
+            height: auto;
+            box-shadow: $boxshadow
+        }
+    }
+}
