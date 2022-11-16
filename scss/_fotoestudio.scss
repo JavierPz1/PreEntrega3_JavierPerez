@@ -8,10 +8,27 @@
     "footer footer";
     .main-foto-estudio {
         padding: 5%;
+        padding-top: 2%;
         grid-area: main;
         display: flex;
         flex-direction: column;
         align-items: center;
+        .main__titulo-estudio{
+            width: 50%;
+            min-width: max-content;
+            text-align: center;
+            color: $colortextos;
+            margin-bottom: 5%;
+            border-bottom-color: $colorprincipal;
+            border-bottom-style: solid;
+            border-radius: 5px;
+            @include tablet{
+                font-size: 3rem;
+            }
+            @include mobile{
+                font-size: 2rem;
+            }
+        }
         .main__imagen1-est {
             margin-bottom: 7%;
             width: 60%;

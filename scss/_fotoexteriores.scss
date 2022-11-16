@@ -13,37 +13,58 @@
         justify-content: space-around;
         align-items: center;
         padding: 3%;
+        .main__titulo-exteriores{
+            width: 50%;
+            min-width: max-content;
+            text-align: center;
+            color: $colortextos;
+            margin-bottom: 5%;
+            border-bottom-color: $colorprincipal;
+            border-bottom-style: solid;
+            border-radius: 5px;
+            @include tablet{
+                font-size: 3rem;
+            }
+            @include mobile{
+                font-size: 2rem;
+            }
+        }
         .main__imagen1-ext {
             display: block;
-            width: 100%;
+            width: 90%;
             height: auto;
             margin-bottom: 3%;
             box-shadow: $boxshadow
         }
         .main__imagen2-ext {
             display: block;
-            width: 100%;
+            width: 90%;
             height: auto;
             margin-bottom: 3%;
             box-shadow: $boxshadow
         }
         .main__imagen3-ext {
-            width: 46%;
+            width: 40%;
             height: auto;
-            margin-right: 1.5%;
             margin-bottom: 3%;
             box-shadow: $boxshadow
         }
         .main__imagen4-ext {
-            width: 46%;
+            width: 40%;
             height: auto;
-            margin-left: 1.5%;
             margin-bottom: 3%;
             box-shadow: $boxshadow
         }
-        .main__imagen5-ext {
+        .main__imagen5-ext{
+            display: block;
+            width: 90%;
+            height: auto;
+            margin-bottom: 3%;
+            box-shadow: $boxshadow
+        }
+        .main__imagen6-ext {
             display: inline-block;
-            width: 55%;
+            width: 50%;
             height: auto;
             box-shadow: $boxshadow
         }
